@@ -29,7 +29,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgb(37, 48, 113)',
+    backgroundColor: '#0B1328',
   },
   content: {
     flex: 1,
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   header: {
     height: 100,
-    backgroundColor: 'blue',
+    backgroundColor: '#202132',
     justifyContent: 'center',
     alignItems: 'center',
   },
