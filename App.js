@@ -26,6 +26,7 @@ const App = () => {
           <View style={styles.box} />
         )}
         keyExtractor={(item) => item.id}
+        contentContainerStyle={styles.centered}
       />
     </View>
   );
@@ -53,7 +54,12 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     borderRadius: 8,
     backgroundColor: 'white', // Establece el color aquí
-  }
+  },
+  centered: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
 
 export default App;
