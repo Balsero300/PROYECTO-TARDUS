@@ -13,6 +13,9 @@ const data = [
   { id: '1' },
   { id: '2' },
   { id: '3' },
+  { id: '4' },
+  { id: '5' },
+  { id: '6' },
   // Agrega más elementos según tus necesidades
 ];
 
@@ -49,13 +52,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   box: {
-    width: 100,
-    height: 100,
+    width: 250,
+    height: 70,
     marginVertical: 8,
     borderRadius: 8,
     backgroundColor: 'white', // Establece el color aquí
   },
-  centered: {
+  centered: { 
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
