@@ -16,7 +16,6 @@ const data = [
   { id: '4' },
   { id: '5' },
   { id: '6' },
-  // Agrega más elementos según tus necesidades
 ];
 
 const App = () => {
@@ -26,7 +25,9 @@ const App = () => {
       <FlatList
         data={data}
         renderItem={() => (
-          <View style={styles.box} />
+          <View style={styles.box}>
+            <View style={styles.innerbox} />
+          </View>
         )}
         keyExtractor={(item) => item.id}
         contentContainerStyle={styles.centered}
@@ -56,13 +57,19 @@ const styles = StyleSheet.create({
     height: 70,
     marginVertical: 8,
     borderRadius: 8,
-    backgroundColor: 'white', // Establece el color aquí
+    backgroundColor: '#D9D9D9',
   },
   centered: { 
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
+  innerbox: {
+    flex: 1,
+    width: 70,
+    backgroundColor: '#767171',
+    borderRadius: 8,
+  }
 });
 
 export default App;
