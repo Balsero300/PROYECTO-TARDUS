@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet, FlatList} from 'react-native';
 
 const Header = () => {
   return (
@@ -9,19 +9,29 @@ const Header = () => {
   );
 };
 
-const App = () => {
-  function handlePress() {
-    console.log('Caja presionada');
-  }
+const data = [
+  { id: '1' },
+  { id: '2' },
+  { id: '3' },
+  { id: '4' },
+  { id: '5' },
+  { id: '6' },
+];
 
+const App = () => {
   return (
     <View style={styles.container}>
       <Header/>
-      <View style={styles.content}>
-        <TouchableOpacity onPress={handlePress} style={styles.touchable}>
-          <Text>Caja</Text>
-        </TouchableOpacity>
-      </View>
+      <FlatList
+        data={data}
+        renderItem={() => (
+          <View style={styles.box}>
+            <View style={styles.innerbox} />
+          </View>
+        )}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={styles.centered}
+      />
     </View>
   );
 };
@@ -29,26 +39,11 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgb(37, 48, 113)',
-  },
-  content: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  touchable: {
-    width: 200,
-    height: 100,
-    backgroundColor: 'red',
-    borderWidth: 8,
-    borderRadius: 20,
-    borderColor: 'rgb(225, 140, 0)',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: '#0B1328',
   },
   header: {
     height: 100,
-    backgroundColor: 'blue',
+    backgroundColor: '#202132',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -57,6 +52,24 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
+  box: {
+    width: 250,
+    height: 70,
+    marginVertical: 8,
+    borderRadius: 8,
+    backgroundColor: '#D9D9D9',
+  },
+  centered: { 
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  innerbox: {
+    flex: 1,
+    width: 70,
+    backgroundColor: '#767171',
+    borderRadius: 8,
+  }
 });
 
 export default App;
