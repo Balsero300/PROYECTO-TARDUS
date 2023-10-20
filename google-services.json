@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "197380152709",
+    "project_id": "proyecto-tardus",
+    "storage_bucket": "proyecto-tardus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:197380152709:android:28bfa1a4dfc81c731638ec",
+        "android_client_info": {
+          "package_name": "Proyecto.Tardus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY-uD8RnANg9c2n8WdlLnwwooB4k7DeP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
