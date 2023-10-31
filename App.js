@@ -4,7 +4,7 @@ import { View, TouchableOpacity, Text, StyleSheet, FlatList} from 'react-native'
 const Header = () => {
   return (
     <View style={styles.header}>
-      <Text style={styles.headerText}>Encabezado</Text>
+      <Text style={styles.headerText}>Inicio</Text>
     </View>
   );
 };
